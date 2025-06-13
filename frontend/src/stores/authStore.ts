@@ -39,7 +39,7 @@ const API_URL = import.meta.env.VITE_API_URL || '/api';
 
 export const useAuthStore = create<AuthState>()(
   persist(
-    (set, get) => ({
+    (set, _get) => ({
       user: null,
       token: null,
       isAuthenticated: false,
