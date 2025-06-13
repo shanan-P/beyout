@@ -55,7 +55,7 @@ app.use('/api/messages', messageRoutes);
 app.use('/api/notifications', notificationRoutes);
 
 // Health check
-app.get('/api/health', (req, res) => {
+app.get('/api/health', (_, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
@@ -73,15 +73,20 @@ const startServer = async () => {
   try {
     // Connect to database
     await connectDatabase();
-    
-    httpServer.listen(PORT, () => {
-      console.log(`🚀 Server running on port ${PORT}`);
-      console.log(`🌍 Environment: ${process.env.NODE_ENV}`);
-    });
   } catch (error) {
-    console.error('Failed to start server:', error);
-    process.exit(1);
+    console.error('Database connection error:', error);
+    // Continue server startup in development even without DB
+    if (process.env.NODE_ENV !== 'development') {
+      process.exit(1);
+    }
   }
+  
+  httpServer.listen(PORT, () => {
+    console.log(`🚀 Server running on port ${PORT}`);
+    console.log(`🌍 Environment: ${process.env.NODE_ENV}`);
+    console.log(`🔗 Frontend URL: ${process.env.CLIENT_URL || 'http://localhost:3000'}`);
+    console.log(`📡 API Health: http://localhost:${PORT}/api/health`);
+  });
 };
 
 startServer();

@@ -65,6 +65,7 @@ export const initializeSocket = (io: Server) => {
     socket.on('message:send', async (data: {
       receiverId: string;
       encryptedContent: string;
+      tempId?: string;
     }) => {
       try {
         // Save message to database

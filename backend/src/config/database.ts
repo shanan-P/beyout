@@ -35,7 +35,14 @@ export const connectDatabase = async (): Promise<void> => {
     console.log('✅ Database migrations completed');
   } catch (error) {
     console.error('❌ Database connection failed:', error);
-    throw error;
+    
+    // In development, don't crash the server if DB is not available
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('⚠️  Running in development mode without database connection');
+      console.warn('⚠️  Some features will not work properly');
+    } else {
+      throw error;
+    }
   }
 };
 
