@@ -8,35 +8,28 @@ const HomePage = () => {
   const features = [
     {
       icon: FiBookOpen,
-      title: 'Interactive Courses',
-      description: 'Learn through hands-on projects and real-world examples with our interactive learning platform.',
+      title: 'YouTube to Courses',
+      description: 'Transform any YouTube playlist into a structured learning course with chapters, notes, and progress tracking.',
       gradient: 'from-blue-500 to-cyan-500',
     },
     {
       icon: FiUsers,
       title: 'Community Learning',
-      description: 'Connect with learners worldwide, share knowledge, and grow together in our vibrant community.',
+      description: 'Connect with other learners, share insights, and discuss course content in dedicated community spaces.',
       gradient: 'from-purple-500 to-pink-500',
     },
     {
       icon: FiAward,
-      title: 'Earn Certificates',
-      description: 'Get recognized for your achievements with verified certificates upon course completion.',
+      title: 'Track Your Progress',
+      description: 'Monitor your learning journey with detailed progress tracking and completion certificates.',
       gradient: 'from-orange-500 to-red-500',
     },
     {
       icon: FiTrendingUp,
-      title: 'Track Progress',
-      description: 'Monitor your learning journey with detailed analytics and personalized insights.',
+      title: 'Personalized Learning',
+      description: 'Get personalized recommendations based on your interests and learning patterns.',
       gradient: 'from-green-500 to-emerald-500',
     },
-  ];
-
-  const stats = [
-    { value: '50K+', label: 'Active Learners' },
-    { value: '500+', label: 'Expert Instructors' },
-    { value: '1000+', label: 'Courses' },
-    { value: '95%', label: 'Success Rate' },
   ];
 
   return (
@@ -55,24 +48,24 @@ const HomePage = () => {
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary-500/10 to-secondary-500/10 backdrop-blur-sm border border-primary-500/20 rounded-full px-4 py-2 mb-8">
             <FiZap className="w-4 h-4 text-primary-600 dark:text-primary-400" />
             <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-              New courses added weekly
+              Transform YouTube content into structured courses
             </span>
           </div>
 
           {/* Hero heading */}
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
-              Master New Skills
+              Learn Smarter with
             </span>
             <br />
             <span className="bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
-              Transform Your Career
+              Beyout
             </span>
           </h1>
 
           <p className="text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
-            Join thousands of learners advancing their careers with expert-led courses, 
-            hands-on projects, and a supportive community.
+            Turn any YouTube playlist into a comprehensive learning experience. 
+            Add structure, track progress, and learn together with a community.
           </p>
 
           {/* CTA buttons */}
@@ -90,22 +83,32 @@ const HomePage = () => {
             </button>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {stats.map((stat, index) => (
-              <div 
-                key={index} 
-                className="text-center animate-appear"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">
-                  {stat.label}
-                </div>
+          {/* Platform highlights instead of fake stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center animate-appear">
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-1">
+                Free
               </div>
-            ))}
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                Forever for Learners
+              </div>
+            </div>
+            <div className="text-center animate-appear" style={{ animationDelay: '100ms' }}>
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-1">
+                Open
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                Community Driven
+              </div>
+            </div>
+            <div className="text-center animate-appear" style={{ animationDelay: '200ms' }}>
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-1">
+                Simple
+              </div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">
+                Easy to Get Started
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -116,11 +119,11 @@ const HomePage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
-                Why Choose LearnHub?
+                Why Choose Beyout?
               </span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Everything you need to succeed in your learning journey
+              We make online learning more structured and social
             </p>
           </div>
 
@@ -162,16 +165,17 @@ const HomePage = () => {
             <div className="relative z-10">
               <FiShield className="w-16 h-16 mx-auto mb-6 text-primary-600 dark:text-primary-400" />
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-                Start Your Learning Journey Today
+                Ready to Transform Your Learning?
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-                Join our community of learners and unlock your potential with free access to premium courses.
+                Join Beyout today and start converting YouTube content into structured courses. 
+                It's free to start and always will be for learners.
               </p>
               <Link 
                 to={isAuthenticated ? "/dashboard" : "/signup"}
                 className="btn-primary text-lg px-8 py-4 inline-flex items-center space-x-2 group"
               >
-                <span>{isAuthenticated ? "Explore Courses" : "Get Started for Free"}</span>
+                <span>{isAuthenticated ? "Create Your First Course" : "Get Started for Free"}</span>
                 <FiArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>

@@ -31,7 +31,7 @@ const LoginPage = () => {
           {/* Logo */}
           <div className="text-center mb-8">
             <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-              <span className="text-white font-bold text-3xl">L</span>
+              <span className="text-white font-bold text-3xl">B</span>
             </div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Welcome Back</h1>
             <p className="text-gray-600 dark:text-gray-400 mt-2">Sign in to continue your learning journey</p>

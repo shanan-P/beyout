@@ -53,10 +53,10 @@ const Layout = () => {
               className="flex items-center space-x-2 group"
             >
               <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-200">
-                <span className="text-white font-bold text-xl">L</span>
+                <span className="text-white font-bold text-xl">B</span>
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
-                LearnHub
+                Beyout
               </span>
             </Link>
 
